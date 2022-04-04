@@ -1,0 +1,107 @@
+html, body {
+    height: 100%;
+    font-size: 1rem;
+    font-family: 'Dosis', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.container {
+
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+.bg-light {
+    background-color: black !important;
+}
+
+.navbar a {
+    color: white !important;
+}
+
+.navbar-toggler {
+    background-color: lightgray;
+}
+
+.gradient {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(205,25,25,0.9139005944174545) 100%);
+}
+
+
+.page-header {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: lighter;
+}
+
+.fancy {
+    color: white;
+    font-size: 90px;
+    font-family: 'Dancing Script', cursive;
+
+}
+
+
+.page-header span {
+    color: #a5a5a5;
+    transition: all 0.7s ease;
+    transition-delay: 0.2s;
+}
+
+.page-header span.fade {
+    color: white;
+    opacity: 1;
+}
+
+.bg-img {
+    background-image: url('../img/bg-pizza.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
+.bg-img-shadow {
+    padding-top: 10rem;
+    background-color: rgba(0,0,0, 0.5);
+    height: 100vh;
+}
+
+.desc-text {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+.col-md-5.desc-text p {
+    display: inline-block;
+
+}
+
+.icons-style {
+    text-decoration: none;
+    color: lightgray;
+
+    margin: 0 12px;
+}
+
+.icons-style:hover {
+    color: gray;
+}
+
+.lp-height {
+    height: calc(100vh - 160px);
+}
+
+.about-us img {
+    border-radius: 20px;
+}
+
+.about-us p {
+    margin-top: 30px;
+    font-size: 20px;
+    margin-right: 40px;
+}
