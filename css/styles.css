@@ -6,6 +6,9 @@ html, body {
     background-color: black;
 }
 
+.container {
+
+}
 
 .nav-link {
     font-weight: bold;
@@ -19,10 +22,8 @@ html, body {
     color: white !important;
 }
 
-
 .navbar-toggler {
-    background-color: gray;
-    border: 1px solid lightgrey;
+    background-color: lightgray;
 }
 
 .gradient {
@@ -37,9 +38,23 @@ html, body {
     font-weight: lighter;
 }
 
-.page-header h1 {
+.fancy {
+    color: white;
     font-size: 90px;
     font-family: 'Dancing Script', cursive;
+
+}
+
+
+.page-header span {
+    color: #a5a5a5;
+    transition: all 0.8s ease;
+    transition-delay: 0.2s;
+}
+
+.page-header span.fade {
+    color: white;
+    opacity: 1;
 }
 
 .bg-img {
@@ -81,12 +96,6 @@ html, body {
     height: calc(100vh - 160px);
 }
 
-
-.about-us {
-    background-color: black;
-    margin-top: 80px;
-}
-
 .about-us img {
     border-radius: 20px;
 }
@@ -94,5 +103,5 @@ html, body {
 .about-us p {
     margin-top: 30px;
     font-size: 20px;
-    margin-right: 90px;
+    margin-right: 40px;
 }
