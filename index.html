@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Per Capita</title>
+    <link rel="icon" type="image/x-icon" href="img/pizza-favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
@@ -13,7 +14,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="img/pizza-logo.png" alt="Logo Per Capita">
+<!--                https://www.flaticon.com/free-icons/pizza-->
+                <div class="navbar-brand-overlay"></div>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +38,7 @@
             </div>
         </div>
     </nav>
-    
+
     <header class="page-header">
         <div class="bg-img">
             <div class="bg-img-shadow">
@@ -91,19 +96,49 @@
         </div>
     </section>
 
-    <section class="products">
+    <section class="top-offers">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h1>Lorem ipsum</h1>
+
+            <div class="row mt-5 mb-5">
+                <h1>Najczęściej wybierane</h1>
+
+                <div class="col-lg-3 offer">
+                    <img class="offer-image" src="img/margherita.jpg" alt="Pizza Margherita">
+                    <div class="image-overlay">
+                        <div class="image-title">Margherita</div>
+                    </div>
                 </div>
 
-                <div class="col-md-6">
-                    <h1>Lorem ipsum</h1>
+                <div class="col-lg-3 offer">
+                    <img class="offer-image" src="img/margheritafancy.jpg" alt="Pizza Margherita con Bufala">
+                    <div class="image-overlay">
+                        <div class="image-title">Margherita con Bufala</div>
+                    </div>
                 </div>
+
+                <div class="col-lg-3 offer">
+                    <img class="offer-image" src="img/sangiorgio.jpg" alt="Pizza San Giorgio">
+                    <div class="image-overlay">
+                        <div class="image-title">San Giorgio</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 offer">
+                    <img class="offer-image" src="img/pancetta.jpg" alt="Pizza Pancetta e Salame">
+                    <div class="image-overlay">
+                        <div class="image-title">Pancetta e Salame</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container text-center">
+            <span>Wszelkie prawa zastrzeżone.</span>
+        </div>
+    </footer>
 
     <script src="js/app.js"></script>
     <script src="js/bootstrap.min.js"></script>
