@@ -26,6 +26,3 @@ function complete() {
     clearInterval(timer);
     timer = null;
 }
-
-
-console.log(splitText);
