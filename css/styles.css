@@ -4,6 +4,7 @@ html, body {
     font-family: 'Dosis', sans-serif;
     color: white;
     background-color: #131110;
+
 }
 
 .bg-light {
@@ -55,9 +56,7 @@ html, body {
     color: white;
     font-size: 90px;
     font-family: 'Dancing Script', cursive;
-
 }
-
 
 .page-header span {
     color: #473b3b;
@@ -70,8 +69,14 @@ html, body {
     opacity: 1;
 }
 
-.bg-img {
+.bg-img-lp {
     background-image: url('../img/bg-pizza.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-img-order {
+    background-image: url('../img/bg-order.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -80,6 +85,11 @@ html, body {
     padding-top: 10rem;
     background-color: rgba(0,0,0, 0.5);
     height: 100vh;
+}
+
+.bg-img-shadow-order {
+    padding-top: 10rem;
+    background-color: rgba(0,0,0, 0.5);
 }
 
 .icons-style {
@@ -109,9 +119,7 @@ html, body {
 }
 
 .offer-image {
-    display: block;
     width: 100%;
-    border-radius: 3px;
 }
 
 .image-overlay {
@@ -128,6 +136,7 @@ html, body {
     opacity: 0;
     transition: opacity 0.3s;
     transform: translateY(0);
+    cursor: pointer;
 }
 
 .image-overlay > .image-title {
@@ -187,3 +196,47 @@ h1 {
     background-color: #392f2f;
 }
 
+.order {
+    margin-top: 150px;
+}
+
+.menu-h1 {
+    font-size: 50px;
+}
+
+.menu-title {
+    font-size: 30px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.menu-description {
+    font-size: 20px;
+}
+
+.menu-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.price {
+    margin-bottom: 0;
+    display: inline;
+    margin-right: 10px;
+}
+
+.order-btn {
+    color: white;
+    border: 1px solid #473b3b;
+    background-color: #473b3b;
+    border-radius: 6px;
+    font-size: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.order-btn:hover {
+    border: 1px solid #392f2f;
+    background-color: #392f2f;
+}
