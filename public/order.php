@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Per Capita</title>
     <link rel="icon" type="image/x-icon" href="img/pizza-favicon.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="resources/css/styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
@@ -14,8 +14,8 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="img/pizza-logo.png" alt="Logo Per Capita">
+        <a class="navbar-brand" href="index.php">
+            <img src="resources/img/pizza-logo.png" alt="Logo Per Capita">
             <!--                https://www.flaticon.com/free-icons/pizza-->
             <div class="navbar-brand-overlay"></div>
         </a>
@@ -317,8 +317,8 @@
 
 
 
-<script src="js/fade.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="resources/js/fade.js"></script>
+<script src="resources/js/bootstrap.min.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
