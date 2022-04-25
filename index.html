@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Per Capita</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:wght@100&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
     <link rel="icon" type="image/x-icon" href="img/pizza-favicon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/register.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
@@ -31,10 +36,41 @@
                         <a class="nav-link" href="#">kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">koszyk</a>
+                        <a class="nav-link" href="#">zaloguj się</a>
                     </li>
-
                 </ul>
+                <ul class="elements">
+                    <li class="navitem">
+                        <a class="navlink " aria-current="page" href="order.html">
+                            <span class="text">menu</span>
+                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span></a>
+                    </li>
+                    <li class="navitem">
+                        <a class="navlink" href="#">
+                            <span class="text">kontakt</span>
+                            <span class="icon"><ion-icon name="call-outline"></ion-icon></span></a>
+                    </li>
+                    <li class="navitem-2">
+                        <a class="navlink" href="#">
+                            <span class="icon-2"><ion-icon name="log-in-outline"></ion-icon></span>
+                    </li>
+        
+                </ul>
+                <div class="register">
+                    <span class="exit"><ion-icon name="close"></ion-icon></span>
+                    <div class="header">Zaloguj sie</div>
+                    <form action="index.html" method="post">
+                        <input placeholder="Login" spellcheck="false">
+                        <div class="pass">
+                            <input id="password" type="password" placeholder="Hasło" spellcheck="false">
+                        </div>
+                        <input type="submit" value="Zaloguj się">
+                    </form>
+                    <div class="other">
+                        <a class="reg" href="#">Zarejestruj się</a>
+                    </div>
+                    <script src="js/hide.js"></script>
+                </div>
             </div>
         </div>
     </nav>
