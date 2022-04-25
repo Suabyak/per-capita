@@ -1,0 +1,213 @@
+@media(max-width: 992px) {
+    
+    .elements{
+        display: none;
+    }
+    .nav-link{
+        font-style: normal;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    
+    
+}
+@media(min-width: 992px) {
+    
+    .elements{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        font-size: 120%;
+
+        
+
+    }
+    .nav-link{
+       display: none;
+    }
+    .navbar-expand-lg .elements{
+        flex-direction: row;
+    }
+    .navitem{
+        color: white;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    a:hover{
+        color:white;
+    }
+    .elements{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        }
+    ul{
+        list-style-type: none;
+    }
+    .navitem-2{
+        margin-left:4rem;
+        margin-top: 1rem;
+        
+    }
+    a:hover{
+       color:white;
+    }
+    
+    .navitem{
+        margin-left:4rem;
+        margin-top: 1rem;
+    }
+    .icon{
+        float: right;
+        position: relative;
+        opacity:0;
+        align-items: center;
+        left: .5rem;
+        font-size: 120%;
+        text-decoration: none;
+        text-align: center;
+     }
+     .icon-2{
+        position: absolute;
+        top:.5rem;
+        
+     }
+    
+     .text{
+        position: absolute;
+        top:.4rem;
+        text-align: center;
+        
+
+       
+    }
+    a{
+        text-decoration: none;
+    }
+     a:hover .icon {
+         
+         transition: 1s;
+         transform: translateY(15px);
+         opacity: 1;
+         
+     }
+     a:hover .text{
+         transform: translateY(-10px);
+         transition: 1s;
+         opacity: 0;
+     }}
+
+     .register
+     {
+         position: absolute;
+         margin-top: 20rem;
+         top: 50%;
+         left: 50%;
+         padding: 3rem 3rem 3rem;
+         background-color: black;
+         transform: translate(-50%, -50%);
+         user-select: none;
+         opacity: 0.99;
+         z-index: 1;
+         min-width: 22rem;
+         min-height: 22rem;
+	    
+
+        }
+        .exit{
+            color:white;
+            position:absolute;
+            font-size: 170%;
+            right: 1rem;
+            top: 1rem;
+           
+        }
+     .header
+     {
+         height: 3vw;
+         font-size: 3vw;
+         text-align: center;
+
+     }
+     
+     
+     input
+     {
+         display: inline;
+         width: 22vw;
+         height: 3.5vw;
+         margin-top: 3vw;
+         padding: 0.6vw 1vw 0.4vw;
+         border: 0;
+         border-bottom: 0.25vw solid grey;
+         outline: none;
+         background-color: whitesmoke;
+         font-size: 1rem;
+         letter-spacing: 0.1vw;
+     }
+
+     
+     #password
+     {
+         width: 22vw;
+     }
+     #eye, #crosedeye
+     {
+         display: block;
+         width: 3vw;
+         height: 2.25vw;
+         margin-top: 3vw;
+         padding-top: 0.75vw;
+         border-bottom: 0.25vw solid darkgrey;
+         background-color: whitesmoke;
+         font-size: 2vw;
+         text-align: center;
+         color: grey;
+     }
+     #crossedEye
+     {
+         display: none;
+     }
+     .register input:focus, .register div:focus-within #password,.register div:focus-within span
+     {
+         border-bottom-color: orangered;
+     }
+     input[type=submit]
+     {
+         box-sizing: content-box;
+         height: 3vw;
+         margin-bottom: 1vw;
+         padding: 0 1vw;
+         border: 0;
+         border-radius: 2.5vw;
+         background-color: orangered;
+         font-size: 1.5vw;
+         color: white;
+         letter-spacing: 0.2vw;
+         cursor: pointer;
+     }
+  
+     .register > a:hover
+     {
+         color: orangered;
+     }
+    .other
+     {
+         display: block;
+         text-align: center;
+         height: 2vh;
+         margin-top: 0.75vw;
+         font-size: 1vw;
+         color: grey;
+     }
+   
+
