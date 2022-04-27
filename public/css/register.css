@@ -1,5 +1,5 @@
 @media(max-width: 992px) {
-    
+
     .elements{
         display: none;
     }
@@ -10,11 +10,11 @@
         color: white;
         text-decoration: none;
     }
-    
-    
+
+
 }
 @media(min-width: 992px) {
-    
+
     .elements{
         position: absolute;
         display: flex;
@@ -24,7 +24,7 @@
         list-style: none;
         font-size: 120%;
 
-        
+
 
     }
     .nav-link{
@@ -56,12 +56,12 @@
     .navitem-2{
         margin-left:4rem;
         margin-top: 1rem;
-        
+
     }
     a:hover{
        color:white;
     }
-    
+
     .navitem{
         margin-left:4rem;
         margin-top: 1rem;
@@ -79,26 +79,23 @@
      .icon-2{
         position: absolute;
         top:.5rem;
-        
+
      }
-    
+
      .text{
         position: absolute;
         top:.4rem;
         text-align: center;
-        
-
-       
     }
     a{
         text-decoration: none;
     }
      a:hover .icon {
-         
+
          transition: 1s;
          transform: translateY(15px);
          opacity: 1;
-         
+
      }
      a:hover .text{
          transform: translateY(-10px);
@@ -120,7 +117,7 @@
          z-index: 1;
          min-width: 22rem;
          min-height: 22rem;
-	    
+
 
         }
         .exit{
@@ -129,7 +126,7 @@
             font-size: 170%;
             right: 1rem;
             top: 1rem;
-           
+
         }
      .header
      {
@@ -138,8 +135,8 @@
          text-align: center;
 
      }
-     
-     
+
+
      input
      {
          display: inline;
@@ -155,7 +152,7 @@
          letter-spacing: 0.1vw;
      }
 
-     
+
      #password
      {
          width: 22vw;
@@ -195,11 +192,7 @@
          letter-spacing: 0.2vw;
          cursor: pointer;
      }
-  
-     .register > a:hover
-     {
-         color: orangered;
-     }
+
     .other
      {
          display: block;
@@ -209,5 +202,5 @@
          font-size: 1vw;
          color: grey;
      }
-   
+
 

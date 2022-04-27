@@ -189,11 +189,13 @@ h1 {
 .btn {
     border: 1px solid #473b3b;
     background-color: #473b3b;
+    color: white;
 }
 
 .btn:hover {
     border: 1px solid #392f2f;
     background-color: #392f2f;
+    color: white;
 }
 
 .order {
@@ -240,3 +242,5 @@ h1 {
     border: 1px solid #392f2f;
     background-color: #392f2f;
 }
+
+
