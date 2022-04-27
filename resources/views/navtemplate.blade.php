@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('css/register.css') }}">
+    <link rel="stylesheet" href="{{ url('css/userpage.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
 </head>
@@ -43,12 +44,14 @@
                 <li class="navitem">
                     <a class="navlink" aria-current="page" href="/order">
                         <span class="text">menu</span>
-                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span></a>
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                    </a>
                 </li>
                 <li class="navitem">
                     <a class="navlink" href="#">
                         <span class="text">kontakt</span>
-                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span></a>
+                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+                    </a>
                 </li>
                 <li class="navitem-2">
                     <a class="navlink" href="#">
@@ -57,87 +60,12 @@
                 </li>
 
             </ul>
-
-            <div class="register">
-                <span class="exit"><ion-icon name="close"></ion-icon></span>
-                <div class="header">Zaloguj sie</div>
-                <form action="" method="post">
-                    <input placeholder="Login" spellcheck="false">
-                    <div class="pass">
-                        <input id="password" type="password" placeholder="Hasło" spellcheck="false">
-                    </div>
-                    <input type="submit" value="Zaloguj się">
-                </form>
-                <div class="other">
-                    <a class="reg" href="#">Zarejestruj się</a>
-                </div>
-            </div>
-
         </div>
     </div>
 </nav>
 
 @yield('content')
 
-<section class="contact">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-lg-6 mt-5">
-                <h1 class="mb-3">Kontakt</h1>
-                <a href="/">Per Capita</a>
-                <br>
-                ul. Sejmowa 5A
-                <br>
-                59-220 Legnica
-                <br>
-                <br>
-                <a href="tel:722137420">tel.: 722 137 420</a>
-                <br>
-                <a href="mailto: percapita@gmail.com">percapita@gmail.com</a>
-                <br>
-                <br>
-                Rezerwacje przyjmujemy wyłącznie przez <strong>kontakt telefoniczny</strong>.
-            </div>
-
-            <div class="col-lg-6 mt-5">
-                <h1>Wyślij wiadomość</h1>
-                <form id="todoForm">
-                    <div class="form-group mt-4">
-                        <input placeholder="Adres e-mail" type="text" class="form-control">
-
-                    </div>
-                    <div class="form-group mt-3 mb-3 ">
-                        <textarea placeholder="Wiadomość" type="text" class="form-control"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Wyślij</button>
-                </form>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="location">
-    <div class="container">
-        <div class="row">
-            <h1>Znajdziesz nas tutaj:</h1>
-            <div class="col-lg-12 location-map mt-3">
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.7933988731024!2d16.147909515758872!3d51.
-                    20445847958652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470f128c143643e9%3A0xd13d291bc4044b4c!2sColle
-                    gium%20Witelona%20Uczelnia%20Pa%C5%84stwowa!5e0!3m2!1spl!2spl!4v1649251131301!5m2!1spl!2spl" width="100%" height="100%"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container text-center">
-        <span>Wszelkie prawa zastrzeżone.</span>
-    </div>
-</footer>
 
 <script src="js/fade.js"></script>
 <script src="js/bootstrap.min.js"></script>
