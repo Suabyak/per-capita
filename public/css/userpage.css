@@ -103,7 +103,7 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
     margin-bottom: 0;
 }
 
-input {
+.input {
     margin-top: 0;
 }
 
