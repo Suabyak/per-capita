@@ -34,7 +34,7 @@
                                     <input type="text" class="form-control mb-3" placeholder="Ulica / nr domu">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="Kod pocztowy">
+                                <input  type="text" class="form-control mb-3" placeholder="Kod pocztowy">
                                 </div>
 
                             </div>
