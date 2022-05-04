@@ -9,4 +9,6 @@ class HomepageController extends Controller
     public function index() {
         return view('homepage.homepage');
     }
+
+
 }
