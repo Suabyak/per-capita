@@ -1,5 +1,5 @@
 
-   
+
    #first_reg{
         position: fixed;
         top: 50%;
@@ -15,17 +15,17 @@
         display: none;
         border-radius: 5px;
     }
-  
+
     .header{
         height: 2rem;
         text-align: center;
         align-items: center;
     }
-  
+
     #password{
         width: 22vw;
     }
-   
+
     #first_reg input:focus, .first_reg div:focus-within #password,#register div:focus-within span{
         border-bottom-color: orangered;
     }
@@ -42,7 +42,7 @@
         letter-spacing: 0.2vw;
         cursor: pointer;
     }
-    
+
     .other{
         display: block;
         text-align: center;
@@ -51,7 +51,8 @@
         font-size: 1vw;
         color: grey;
     }
-    form{
+
+    .form{
         display: flex;
         flex-direction: column;
         align-items: center;
