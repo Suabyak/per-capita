@@ -48,9 +48,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">kontakt</a>
                     </li>
+                    @auth
                     <li class="nav-item">
-                        <a onclick="show_hide()" class="nav-link" href="/login">zaloguj się</a>
+                        <a onclick="show_hide()" class="nav-link" href="{{route('edit')}}">profil</a>
                     </li>
+                    <li class="nav-item">
+                        <a onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();" class="nav-link" href="{{ route('logout') }}">wyloguj się</a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                    </li>
+                    @endauth
+                    @guest
+                    <li class="nav-item">
+                        <a onclick="show_hide()" class="nav-link" href="{{ route('login') }}">zaloguj się</a>
+                    </li>
+                    @endguest
                 </ul>
 
                     <ul class="elements">
@@ -61,6 +76,11 @@
                             </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('edit') }}"
+                               onclick="show_hide()">
+                                {{ __('Profil') }}
+                            </a>
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">

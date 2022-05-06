@@ -26,7 +26,7 @@ Route::get('order', [OrderpageController::class, 'index']);
 
 
 
-Route::get('user/{id}', [UserController::class, 'edit'])->name('edit');
+Route::get('user/profile', [UserController::class, 'edit'])->name('edit');
 
 Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
 
@@ -38,9 +38,6 @@ Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('index');
 
 Route::post('/', [UserController::class, 'store'])->name('user_store');
-
-
-
