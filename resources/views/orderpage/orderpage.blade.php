@@ -23,6 +23,10 @@
                 </div>
 
                 <section class="order">
+                  @foreach ($products as $product)
+                  {{$product->name}}
+                  @endforeach
+                  <!--
                     <div class="row">
                         <div class="col-lg-6 fancy">
                             <h1 class="menu-h1">Pizza</h1>
@@ -269,6 +273,7 @@
                             <button class="order-btn">ZAMÓW</button>
                         </div>
                     </div>
+                  -->
                 </section>
             </div>
         </div>

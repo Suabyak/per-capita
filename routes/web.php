@@ -38,7 +38,7 @@ Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomepageController::class, 'index']);
 
 Route::post('/', [UserController::class, 'store'])->name('user_store');
 
