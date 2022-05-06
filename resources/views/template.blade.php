@@ -24,7 +24,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="img/pizza-logo.png" alt="Logo Per Capita">
+                <img src="{{ '/../img/pizza-logo.png' }}" alt="Logo Per Capita">
 <!--                https://www.flaticon.com/free-icons/pizza-->
                 <div class="navbar-brand-overlay"></div>
             </a>
@@ -60,44 +60,7 @@
                             <button onclick="show_hide()" class="icon-2"><ion-icon name="log-in-outline"></ion-icon></button>
                         </a>
                     </li>
-
-                    </ul>
-                    <div id="register">
-                        <span onclick="show_hide()" class="exit"><ion-icon name="close"></ion-icon></span>
-
-                        <form class="form" method="POST" action="{{ route('user_store') }}">
-                            <div class="header">Zaloguj się</div>
-                                <input id="email" placeholder="E-mail" spellcheck="false" type="email" name="password">
-                                <input id="password-input"  placeholder="Hasło" type="password" name="password">
-                                <input class="login-submit" type="submit" value="Zaloguj się">
-                                <div class="other">
-                                    <a onclick="show_hide_exit()" class="reg" href="">Zarejestruj się</a>
-                                </div>
-                        </form>
-
-                    </div>
-                    <div id="first_reg">
-                        <span onclick="show_hide_first()" class="exit"><ion-icon name="close"></ion-icon></span>
-
-                        <form class="form" action="{{ route('user_store') }}" method="POST" role="form">
-
-                            <div class="header">Zarejestruj się</div>
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                                    <input id="email" placeholder="E-mail" spellcheck="false" type="email" name="email">
-                                    <input class="password-input" placeholder="Hasło" spellcheck="false" type="password" name="password">
-
-                                    <input  class="register-submit" type="submit" value="Zarejestruj się">
-                                    <div class="other">
-                                        <a onclick="show_hide_exit()" class="reg" href="">Wróć do logowania</a>
-                                </div>
-                        </form>
-
-                    </div>
-
-
-
-
+                </ul>
             </div>
         </div>
     </nav>

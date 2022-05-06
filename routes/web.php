@@ -5,6 +5,7 @@ use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\OrderpageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserpageController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,10 +23,24 @@ Route::get('/', [HomepageController::class, 'index']);
 
 Route::get('order', [OrderpageController::class, 'index']);
 
-Route::get('user', [UserpageController::class, 'index']);
+
+
+
+Route::get('user/{id}', [UserController::class, 'edit'])->name('edit');
+
+Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
+
+
+
+
+
+
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::post('/', [UserController::class, 'store'])->name('user_store');
+
+
+
