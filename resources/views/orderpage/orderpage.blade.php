@@ -1,4 +1,4 @@
-@extends('template')
+@extends('navtemplate')
 
 @section('title')
     {{ $title }}

@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:wght@100&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ url('img/pizza-favicon.png') }}">
-    <link rel="stylesheet" href="{{ url('css/bootstrap.min.css?version=1') }}">
+    <link rel="stylesheet" href="{{ url('/../css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-    <link rel="stylesheet" href="{{ url('css/styles.css?version=1') }}">
-    <link rel="stylesheet" href="{{ url('css/userpage.css?version=1') }}">
-    <link rel="stylesheet" href="{{ url('css/register.css?version=1') }}">
-    <link rel="stylesheet" href="{{ url('css/register_first_time.css?version=1') }}">
+
+    <link rel="stylesheet" href="{{ url('/../css/userpage.css?version=1') }}">
+    <link rel="stylesheet" href="{{ url('/../css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/register.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/register_first_time.css') }}">
+
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
 
@@ -47,7 +49,7 @@
                         <a class="nav-link" href="#">kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a onclick="show_hide()" class="nav-link" href="#">zaloguj się</a>
+                        <a onclick="show_hide()" class="nav-link" href="/login">zaloguj się</a>
                     </li>
                 </ul>
 
@@ -72,6 +74,20 @@
                         </div>
                         </li>
                         @endauth
+                        @guest
+                            <li class="navitem dropdown">
+                                <a id="navbarDropdown" class="navlink dropdown-toggle " href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ __('Niezalogowany') }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('login') }}">
+                                        {{ __('Zaloguj się') }}
+                                    </a>
+
+                                </div>
+                            </li>
+                        @endguest
 
                         <li class="navitem">
                         <a class="navlink" aria-current="page" href="/order">
@@ -85,9 +101,6 @@
                             <span class="icon"><ion-icon name="call-outline"></ion-icon></span></a>
                         </li>
 
-                        <li class="navitem-2">
-                            <button onclick="show_hide()" class="icon-2"><ion-icon name="log-in-outline"></ion-icon></button>
-                        </li>
                     </ul>
             </div>
         </div>
