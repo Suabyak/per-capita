@@ -9,8 +9,6 @@
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
                         <a class="list-group-item list-group-item-action" data-toggle="list" href="">Dane do wysyłki</a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="">Historia zamówień</a>
-
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -34,7 +32,7 @@
                                     <input type="text" class="form-control mb-3" placeholder="Ulica / nr domu">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="Kod pocztowy">
+                                <input  type="text" class="form-control mb-3" placeholder="Kod pocztowy">
                                 </div>
 
                             </div>
