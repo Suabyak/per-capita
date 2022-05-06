@@ -14,9 +14,9 @@ class AddUsersDetails extends Migration
     public function up()
     {
         Schema::table('users', function(Blueprint $table){
-            $table->string('city');
-            $table->string('street');
-            $table->string('zip');
+            $table->string('city')->nullable();
+            $table->string('street')->nullable();
+            $table->string('zip')->nullable();
         });
     }
 
