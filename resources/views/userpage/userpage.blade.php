@@ -13,39 +13,38 @@
                 </div>
                 <div class="col-md-9">
                     <div class="tab-content">
-                        <div class="tab-pane fade active show" id="">
-
+                        <div class="tab-pane fade active show">
+                            <form action="{{ route('edit_store') }}" method="POST" role="form">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="id" value="{{ $user->id }}">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="Imię">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="Nazwisko">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="E-mail">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="Miejscowość">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control mb-3" placeholder="Ulica / nr domu">
-                                </div>
-                                <div class="form-group">
-                                <input  type="text" class="form-control mb-3" placeholder="Kod pocztowy">
+                                    <input type="text" name="name" class="form-control mb-3" placeholder="Imię i nazwisko">
                                 </div>
 
+                                <div class="form-group">
+                                    <input type="email" name="email" class="form-control mb-3" placeholder="E-mail" value="{{ $user->email }}">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="city" class="form-control mb-3" placeholder="Miejscowość">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="street" class="form-control mb-3" placeholder="Ulica / nr domu">
+                                </div>
+                                <div class="form-group">
+                                <input  type="text" name="zip" class="form-control mb-3" placeholder="Kod pocztowy">
+                                </div>
+
+                                <button type="submit" class="btn">Zapisz</button>
                             </div>
+
+                            </form>
                         </div>
 
                 </div>
             </div>
         </div>
-
-        <div class="text-right mt-3">
-            <button type="button" class="btn">Zapisz</button>
-        </div>
-
     </div>
 
 @endsection

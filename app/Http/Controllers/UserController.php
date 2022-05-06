@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function index(UserRepository $userRepo, $id) {
+        $user = $userRepo->find($id);
+
+        return view('userpage.userpage', ["user"=>$user]);
+    }
+
     public function store(Request $request) {
         $user = new User;
 
@@ -15,6 +22,33 @@ class UserController extends Controller
 
 
         $user->save();
-        return view('userpage.userpage');
+        return redirect()->route('login');
+    }
+
+    public function edit(UserRepository $userRepo, $id) {
+        $user = $userRepo->find($id);
+
+
+        return view('userpage.userpage', [
+            "user" => $user,
+        ]);
+    }
+
+    public function editStore(Request $request) {
+
+        $user = User::find($request->input('id'));
+
+
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->city = $request->input('city');
+        $user->street = $request->input('street');
+        $user->zip = $request->input('zip');
+
+        $user->save();
+
+        return view('userpage.userpage', [
+            "user" => $user,
+        ]);
     }
 }
