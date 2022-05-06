@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
-
-    <link rel="stylesheet" href="{{ url('/../css/userpage.css?version=1') }}">
-    <link rel="stylesheet" href="{{ url('/../css/styles.css') }}">
     <link rel="stylesheet" href="{{ url('/../css/register.css') }}">
     <link rel="stylesheet" href="{{ url('/../css/register_first_time.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/userpage.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/styles.css') }}">
+
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
@@ -48,24 +48,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">kontakt</a>
                     </li>
-                    @auth
                     <li class="nav-item">
-                        <a onclick="show_hide()" class="nav-link" href="{{route('edit')}}">profil</a>
+                        <a onclick="show_hide()" class="nav-link" href="/login">zaloguj się</a>
                     </li>
-                    <li class="nav-item">
-                        <a onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();" class="nav-link" href="{{ route('logout') }}">wyloguj się</a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
-                    </li>
-                    @endauth
-                    @guest
-                    <li class="nav-item">
-                        <a onclick="show_hide()" class="nav-link" href="{{ route('login') }}">zaloguj się</a>
-                    </li>
-                    @endguest
                 </ul>
 
                     <ul class="elements">
@@ -76,11 +61,6 @@
                             </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('edit') }}"
-                               onclick="show_hide()">
-                                {{ __('Profil') }}
-                            </a>
-
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
@@ -129,8 +109,8 @@
 @yield('content')
 
 
-<script src="/../js/fade.js"></script>
-<script src="/../js/bootstrap.min.js"></script>
+<script src="js/fade.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

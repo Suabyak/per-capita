@@ -2,7 +2,6 @@ html, body {
     height: 100%;
     font-size: 1rem;
     font-family: 'Dosis', sans-serif;
-    color: white !important;
     background-color: #131110;
 }
 
@@ -240,4 +239,8 @@ h1 {
 .order-btn:hover {
     border: 1px solid #392f2f;
     background-color: #392f2f;
+}
+
+.label {
+    color: black !important;
 }
