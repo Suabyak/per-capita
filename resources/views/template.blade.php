@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Hubballi&family=Lato:wght@100&family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="{{ url('img/pizza-favicon.png') }}">
-    <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url('css/styles.css?version=1') }}">
-    <link rel="stylesheet" href="{{ url('css/register.css') }}">
-    <link rel="stylesheet" href="{{ url('css/register_first_time.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url('/../img/pizza-favicon.png') }}">
+    <link rel="stylesheet" href="{{ url('/../css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/register.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/register_first_time.css') }}">
 
 
 
@@ -125,9 +125,9 @@
         <span>Wszelkie prawa zastrzeżone.</span>
     </div>
 </footer>
-<script src="js/show_hide.js"></script>
-<script src="js/fade.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="/../js/show_hide.js"></script>
+<script src="/../js/fade.js"></script>
+<script src="/../js/bootstrap.min.js"></script>
 
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
