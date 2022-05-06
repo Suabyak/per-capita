@@ -2,9 +2,8 @@ html, body {
     height: 100%;
     font-size: 1rem;
     font-family: 'Dosis', sans-serif;
-    color: white;
+    color: white !important;
     background-color: #131110;
-
 }
 
 .bg-light {
@@ -189,11 +188,13 @@ h1 {
 .btn {
     border: 1px solid #473b3b;
     background-color: #473b3b;
+    color: white;
 }
 
 .btn:hover {
     border: 1px solid #392f2f;
     background-color: #392f2f;
+    color: white;
 }
 
 .order {

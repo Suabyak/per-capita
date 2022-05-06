@@ -1,44 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Per Capita</title>
-    <link rel="icon" type="image/x-icon" href="img/pizza-favicon.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/styles.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;400;600&display=swap" rel="stylesheet">
-</head>
+@extends('navtemplate')
 
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="img/pizza-logo.png" alt="Logo Per Capita">
-            <!--                https://www.flaticon.com/free-icons/pizza-->
-            <div class="navbar-brand-overlay"></div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">kontakt</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">koszyk</a>
-                </li>
+@section('title')
+    {{ $title }}
+@endsection
 
-            </ul>
-        </div>
-    </div>
-</nav>
-
+@section('content')
 <header class="page-header">
     <div class="bg-img-order">
         <div class="bg-img-shadow-order">
@@ -57,51 +23,51 @@
                 </div>
 
                 <section class="order">
-                        <div class="row">
-                            <div class="col-lg-6 fancy">
-                                <h1 class="menu-h1">Pizza</h1>
-                            </div>
+                    <div class="row">
+                        <div class="col-lg-6 fancy">
+                            <h1 class="menu-h1">Pizza</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 menu-item">
+                            <p class="menu-title">NAPOLI</p>
+                            <p class="menu-description">
+                                pomidory San Marzano DOP, filety anchois, oregano z Sycylii, pomidorki datterini
+                            </p>
+                            <p class="price">36 zł</p>
+                            <button class="order-btn">ZAMÓW</button>
                         </div>
 
-                        <div class="row">
-                            <div class="col-lg-6 menu-item">
-                                <p class="menu-title">NAPOLI</p>
-                                <p class="menu-description">
-                                    pomidory San Marzano DOP, filety anchois, oregano z Sycylii, pomidorki datterini
-                                </p>
-                                <p class="price">36 zł</p>
-                                <button class="order-btn">ZAMÓW</button>
-                            </div>
+                        <div class="col-lg-6 menu-item">
+                            <p class="menu-title">LA BUFALA</p>
+                            <p class="menu-description">
+                                pomidory San Marzano DOP, mozzarella La Bufala DOP, bazylia
+                            </p>
+                            <p class="price">35 zł</p>
+                            <button class="order-btn">ZAMÓW</button>
+                        </div>
+                    </div>
 
-                            <div class="col-lg-6 menu-item">
-                                <p class="menu-title">LA BUFALA</p>
-                                <p class="menu-description">
-                                    pomidory San Marzano DOP, mozzarella La Bufala DOP, bazylia
-                                </p>
-                                <p class="price">35 zł</p>
-                                <button class="order-btn">ZAMÓW</button>
-                            </div>
+                    <div class="row">
+                        <div class="col-lg-6 menu-item">
+                            <p class="menu-title">BIANCA</p>
+                            <p class="menu-description">
+                                mozzarella fior di latte, mascarpone, Gorgonzola DOP, cebula piklowana, orzechy włoskie
+                            </p>
+                            <p class="price">37 zł</p>
+                            <button class="order-btn">ZAMÓW</button>
                         </div>
 
-                        <div class="row">
-                            <div class="col-lg-6 menu-item">
-                                <p class="menu-title">BIANCA</p>
-                                <p class="menu-description">
-                                    mozzarella fior di latte, mascarpone, Gorgonzola DOP, cebula piklowana, orzechy włoskie
-                                </p>
-                                <p class="price">37 zł</p>
-                                <button class="order-btn">ZAMÓW</button>
-                            </div>
-
-                            <div class="col-lg-6 menu-item">
-                                <p class="menu-title">VEGETARIANA</p>
-                                <p class="menu-description">
-                                    pomidory San Marzano DOP, mozzarella fior di latte, bakłażan pieczony, papryka duszona, cebula piklowana, cukinia
-                                </p>
-                                <p class="price">35 zł</p>
-                                <button class="order-btn">ZAMÓW</button>
-                            </div>
+                        <div class="col-lg-6 menu-item">
+                            <p class="menu-title">VEGETARIANA</p>
+                            <p class="menu-description">
+                                pomidory San Marzano DOP, mozzarella fior di latte, bakłażan pieczony, papryka duszona, cebula piklowana, cukinia
+                            </p>
+                            <p class="price">35 zł</p>
+                            <button class="order-btn">ZAMÓW</button>
                         </div>
+                    </div>
 
                     <div class="row">
                         <div class="col-lg-6 menu-item">
@@ -303,24 +269,10 @@
                             <button class="order-btn">ZAMÓW</button>
                         </div>
                     </div>
-
                 </section>
-
             </div>
-
-
         </div>
     </div>
 </header>
 
-
-
-
-
-<script src="js/fade.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-</html>
+@endsection
