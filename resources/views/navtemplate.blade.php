@@ -50,7 +50,7 @@
                     </li>
                     @auth
                     <li class="nav-item">
-                        <a onclick="show_hide()" class="nav-link" href="/login">profil</a>
+                        <a onclick="show_hide()" class="nav-link" href="{{route('edit')}}">profil</a>
                     </li>
                     <li class="nav-item">
                         <a onclick="event.preventDefault();
@@ -76,6 +76,11 @@
                             </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('edit') }}"
+                               onclick="show_hide()">
+                                {{ __('Profil') }}
+                            </a>
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
