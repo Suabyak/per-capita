@@ -18,22 +18,31 @@
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="hidden" name="id" value="{{ $user->id }}">
                             <div class="card-body">
+
+
+                                <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Imię i nazwisko') }}</label>
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control mb-3" placeholder="Imię i nazwisko">
+                                    <input type="text" name="name" class="form-control mb-3 mt-1" value="{{ $user->name }}">
                                 </div>
 
+                                <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('E-mail') }}</label>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control mb-3" placeholder="E-mail" value="{{ $user->email }}">
+                                    <input type="email" name="email" class="form-control mb-3 mt-1" value="{{ $user->email }}">
                                 </div>
 
+                                <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Miejscowość') }}</label>
                                 <div class="form-group">
-                                    <input type="text" name="city" class="form-control mb-3" placeholder="Miejscowość">
+                                    <input type="text" name="city" class="form-control mb-3 mt-1" value="{{ $user->city }}">
                                 </div>
+
+                                <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Ulica / nr domu') }}</label>
                                 <div class="form-group">
-                                    <input type="text" name="street" class="form-control mb-3" placeholder="Ulica / nr domu">
+                                    <input type="text" name="street" class="form-control mb-3 mt-1" value="{{ $user->street }}">
                                 </div>
+
+                                <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Kod pocztowy') }}</label>
                                 <div class="form-group">
-                                <input  type="text" name="zip" class="form-control mb-3" placeholder="Kod pocztowy">
+                                <input  type="text" name="zip" class="form-control mb-3 mt-1" value="{{ $user->zip }}">
                                 </div>
 
                                 <button type="submit" class="btn">Zapisz</button>
