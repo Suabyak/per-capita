@@ -26,7 +26,7 @@ Route::get('order', [OrderpageController::class, 'index']);
 
 
 
-Route::get('user/{id}', [UserController::class, 'edit'])->name('edit');
+Route::get('user/profile', [UserController::class, 'edit'])->name('edit');
 
 Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
 
@@ -41,6 +41,3 @@ Auth::routes();
 Route::get('/home', [HomepageController::class, 'index']);
 
 Route::post('/', [UserController::class, 'store'])->name('user_store');
-
-
-
