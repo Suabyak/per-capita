@@ -24,34 +24,65 @@
 
                 <section class="order">
 
-{{--                  @foreach ($products as $product)
-                  {{$product->name}}
-                  @endforeach--}}
-
-
-                  <!--
                     <div class="row">
                         <div class="col-lg-6 fancy">
                             <h1 class="menu-h1">Pizza</h1>
                         </div>
                     </div>
 
+                  @php
+                    $i = 0;
+                  @endphp
+
+                  @foreach ($products as $product)
+                    @if ($i == 0)
+                      @php
+                        $i++;
+                      @endphp
+                        <div class="row">
+                            <div class="col-lg-6 menu-item">
+                                <p class="menu-title">{{$product->name}}</p>
+                                <p class="menu-description">
+                                    {{$product->description}}
+                                </p>
+                                <p class="price">{{$product->price}} zł</p>
+                                <button class="order-btn">ZAMÓW</button>
+                            </div>
+                    @else
+                      @php
+                        $i--;
+                      @endphp
+                          <div class="col-lg-6 menu-item">
+                              <p class="menu-title">{{$product->name}}</p>
+                              <p class="menu-description">
+                                  {{$product->description}}
+                              </p>
+                              <p class="price">{{$product->price}} zł</p>
+                              <button class="order-btn">ZAMÓW</button>
+                          </div>
+                      </div>
+                    @endif
+                  @endforeach
+
+
+                  <!--
+
                     <div class="row">
                         <div class="col-lg-6 menu-item">
-                            <p class="menu-title">NAPOLI</p>
+                            <p class="menu-title">{{$product->name}}</p>
                             <p class="menu-description">
-                                pomidory San Marzano DOP, filety anchois, oregano z Sycylii, pomidorki datterini
+                                {{$product->description}}
                             </p>
-                            <p class="price">36 zł</p>
+                            <p class="price">{{$product->prize}} zł</p>
                             <button class="order-btn">ZAMÓW</button>
                         </div>
 
                         <div class="col-lg-6 menu-item">
-                            <p class="menu-title">LA BUFALA</p>
+                            <p class="menu-title">{{$product->name}}</p>
                             <p class="menu-description">
-                                pomidory San Marzano DOP, mozzarella La Bufala DOP, bazylia
+                                {{$product->description}}
                             </p>
-                            <p class="price">35 zł</p>
+                            <p class="price">{{$product->prize}} zł</p>
                             <button class="order-btn">ZAMÓW</button>
                         </div>
                     </div>
