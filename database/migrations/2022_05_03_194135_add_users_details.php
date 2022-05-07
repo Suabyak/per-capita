@@ -17,6 +17,8 @@ class AddUsersDetails extends Migration
             $table->string('city');
             $table->string('street');
             $table->string('zip');
+            $table->string('city')->nullable();
+            $table->string('street')->nullable();
         });
     }
 
