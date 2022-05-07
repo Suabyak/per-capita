@@ -23,9 +23,12 @@
                 </div>
 
                 <section class="order">
-                  @foreach ($products as $product)
+
+{{--                  @foreach ($products as $product)
                   {{$product->name}}
-                  @endforeach
+                  @endforeach--}}
+
+
                   <!--
                     <div class="row">
                         <div class="col-lg-6 fancy">
@@ -133,146 +136,6 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-6 fancy">
-                            <h1 class="menu-h1 mt-5">Antipasti</h1>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">OLIVE TAGGIASCHE</p>
-                            <p class="menu-description">
-                                oliwki Taggiasche z gospodarstwa rodziny Roi w Badalucco w regionie Ligurii
-                            </p>
-                            <p class="price">16 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">FORMAGGI</p>
-                            <p class="menu-description">
-                                selekcja włoskich serów z konfiturą z czerwonej cebuli w Aceto Balsamico di Modena
-                            </p>
-                            <p class="price">20 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">CIPOLLE BORETTANE</p>
-                            <p class="menu-description">
-                                cebulki borettane w Aceto Balsamico di Modena IGT
-                            </p>
-                            <p class="price">14 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">BOCCIOLI DI CARCIOFI GRIGLIATI</p>
-                            <p class="menu-description">
-                                grillowane karczochy w oliwie i occie z natką pietruszki
-                            </p>
-                            <p class="price">16 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">PROSCIUTTO DI SAN DANIELE DOP</p>
-                            <p class="menu-description">
-                                włoska szynka dojrzewająca przez 18 miesięcy wyłącznie w San Daniele del Friuli
-                            </p>
-                            <p class="price">18 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">COPPA L'ARTEMANO</p>
-                            <p class="menu-description">
-                                suszona, pełna aromatycznych przypraw, ręcznie robiona karkówka
-                            </p>
-                            <p class="price">16 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        <div class="col-lg-6 fancy">
-                            <h1 class="menu-h1 mt-5">Insalate</h1>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">ZUCCHINO</p>
-                            <p class="menu-description">
-                                cukinia, pomidory cherry, ricotta, Grana Padano 24-msc DOP, orzechy włoskie,
-                                orzechy pinii, pesto bazyliowe, domowe pieczywo
-                            </p>
-                            <p class="price">16 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">INSALATA SAN DANIELE</p>
-                            <p class="menu-description">
-                                rukola, pomidory cherry, prosciutto San Daniele 18-msc DOP, Grana Padano 24-msc DOP,
-                                cebulki borettane, sos vinegret, domowe pieczywo
-                            </p>
-                            <p class="price">20 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 fancy">
-                            <h1 class="menu-h1 mt-5">Dolci</h1>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">CIAOMISU</p>
-                            <p class="menu-description">
-                                tiramisu z amaretto i kruszonym ciastkiem czekoladowym
-                            </p>
-                            <p class="price">19 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">PANNA COTTA</p>
-                            <p class="menu-description">
-                                z musem owocowym
-                            </p>
-                            <p class="price">17 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">SERNIK Z BIAŁĄ CZEKOLADĄ</p>
-                            <p class="menu-description">
-                                kremowy sernik na mascarpone z musem owocowym na orzechowym spodzie
-                            </p>
-                            <p class="price">19 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-
-                        <div class="col-lg-6 menu-item">
-                            <p class="menu-title">CANNOLI</p>
-                            <p class="menu-description">
-                                chrupiąca rurka nadziana kremem z ricotty i pistacji według sycylijskiej receptury
-                            </p>
-                            <p class="price">16 zł</p>
-                            <button class="order-btn">ZAMÓW</button>
-                        </div>
-                    </div>
                   -->
                 </section>
             </div>

@@ -29,38 +29,58 @@
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="/">
-                <img src="{{ '/../img/pizza-logo.png' }}" alt="Logo Per Capita">
-<!--                https://www.flaticon.com/free-icons/pizza-->
-                <div class="navbar-brand-overlay"></div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="{{ '/../img/pizza-logo.png' }}" alt="Logo Per Capita">
+            <!--                https://www.flaticon.com/free-icons/pizza-->
+            <div class="navbar-brand-overlay"></div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
 
-                <ul class="navbar-nav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/order">menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">kontakt</a>
+                </li>
+                @auth
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/order">menu</a>
+                        <a onclick="show_hide()" class="nav-link" href="{{route('edit')}}">profil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a onclick="show_hide()" class="nav-link" href="/login">zaloguj się</a>
-                    </li>
-                </ul>
+                        <a onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();" class="nav-link" href="{{ route('logout') }}">wyloguj się</a>
 
-                    <ul class="elements">
-                        @auth
-                        <li class="navitem dropdown">
-                            <a id="navbarDropdown" class="navlink dropdown-toggle " href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::User()->email }}
-                            </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                @endauth
+                @guest
+                    <li class="nav-item">
+                        <a onclick="show_hide()" class="nav-link" href="{{ route('login') }}">zaloguj się</a>
+                    </li>
+                @endguest
+            </ul>
+
+            <ul class="elements">
+                @auth
+                    <li class="navitem dropdown">
+                        <a id="navbarDropdown" class="navlink dropdown-toggle " href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::User()->email }}
+                        </a>
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('edit') }}"
+                               onclick="show_hide()">
+                                {{ __('Profil') }}
+                            </a>
+
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                        document.getElementById('logout-form').submit();">
@@ -72,39 +92,39 @@
                             </form>
 
                         </div>
-                        </li>
-                        @endauth
-                        @guest
-                            <li class="navitem dropdown">
-                                <a id="navbarDropdown" class="navlink dropdown-toggle " href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ __('Niezalogowany') }}
-                                </a>
+                    </li>
+                @endauth
+                @guest
+                    <li class="navitem dropdown">
+                        <a id="navbarDropdown" class="navlink dropdown-toggle " href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ __('Niezalogowany') }}
+                        </a>
 
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('login') }}">
-                                        {{ __('Zaloguj się') }}
-                                    </a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('login') }}">
+                                {{ __('Zaloguj się') }}
+                            </a>
 
-                                </div>
-                            </li>
-                        @endguest
+                        </div>
+                    </li>
+                @endguest
 
-                        <li class="navitem">
-                        <a class="navlink" aria-current="page" href="/order">
-                            <span class="text">menu</span>
-                            <span class="icon"><ion-icon name="book-outline"></ion-icon></span></a>
-                        </li>
+                <li class="navitem">
+                    <a class="navlink" aria-current="page" href="/order">
+                        <span class="text">menu</span>
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span></a>
+                </li>
 
-                        <li class="navitem">
-                        <a class="navlink" href="#">
-                            <span class="text">kontakt</span>
-                            <span class="icon"><ion-icon name="call-outline"></ion-icon></span></a>
-                        </li>
+                <li class="navitem">
+                    <a class="navlink" href="#">
+                        <span class="text">kontakt</span>
+                        <span class="icon"><ion-icon name="call-outline"></ion-icon></span></a>
+                </li>
 
-                    </ul>
-            </div>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
 @yield('content')
 
