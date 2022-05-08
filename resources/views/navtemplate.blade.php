@@ -47,7 +47,7 @@
                     <a class="nav-link active" aria-current="page" href="/order">menu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">kontakt</a>
+                    <a class="nav-link" href="\#contact">kontakt</a>
                 </li>
                 @auth
                     <li class="nav-item">
@@ -123,7 +123,7 @@
                 </li>
 
                 <li class="navitem">
-                    <a class="navlink" href="#">
+                    <a class="navlink" href="\#contact">
                         <span class="text">kontakt</span>
                         <span class="icon"><ion-icon name="call-outline"></ion-icon></span></a>
                 </li>
