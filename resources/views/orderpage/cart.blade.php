@@ -44,8 +44,10 @@
               Razem: {{\Gloudemans\Shoppingcart\Facades\Cart::total(0)}} zł
             </p>
               <a href="{{  route('checkout')  }}"><button class="btn me-3">DOSTAWA I PŁATNOŚĆ</button></a>
-            @endif
               <a href="{{ route('orderpage') }}"><button class="btn">KONTYNUUJ ZAKUPY</button></a>
+            @else
+              <a href="{{ route('orderpage') }}"><button class="btn">PRZEJDŹ DO MENU</button></a>
+            @endif
           </div>
       </div>
   </section>
