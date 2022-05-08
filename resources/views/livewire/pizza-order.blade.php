@@ -15,7 +15,9 @@
           <p class="price">{{$product->price}} zł</p>
           <form wire:submit.prevent="addToCart({{$product->id}})" method="POST" action="{{route('cart.store')}}">
             @csrf
+            @auth
             <button class="order-btn">ZAMÓW</button>
+            @endauth
           </form>
 
       </div>
