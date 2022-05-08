@@ -1,50 +1,73 @@
 @extends('navtemplate')
 
-
 @section('title')
-    - Zamówienie - {{ \Gloudemans\Shoppingcart\Facades\Cart::content()->count(); }}
+    - Zamówienie - {{ \Gloudemans\Shoppingcart\Facades\Cart::content()->count() }}
 @endsection
 
 @section('content')
   <form action="{{ route('checkout.address') }}" method="POST" role="form">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <input type="hidden" name="id" value="{{ $user->id }}">
-  <div class="card-body">
+  <div class="container mt-6 pb-2 cart">
+    <div class="row">
 
+        <div class="col-lg-8">
+            <h4><strong>Zamówienie</strong></h4>
+            <hr>
 
-      <label for="email" class="col-form-label pb-0 text-md-end text-dark" >{{ __('Imię i nazwisko') }}</label>
-      <div class="form-group">
-          <input type="text" name="name" class="form-control mb-3 mt-1" value="{{ $user->name }}" required>
-      </div>
+            @forelse(\Gloudemans\Shoppingcart\Facades\Cart::content() as $product)
+                <div class="row">
+                    <div class="container">
 
-      <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('E-mail') }}</label>
-      <div class="form-group">
-          <input type="email" name="email" class="form-control mb-3 mt-1" value="{{ $user->email }}" required>
-      </div>
+                        <div class="col-lg-12 menu-item pb-0 cart">
+                            <h4>{{$product->qty}} x {{$product->name}}</h4>
+                            <p class="price">{{$product->price*$product->qty}} zł</p>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            @empty
+                @php
+                    $empty = true;
+                @endphp
+                <div class="row">
+                    <div class="container">
 
-      <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Miejscowość') }}</label>
-      <div class="form-group">
-          <input type="text" name="city" class="form-control mb-3 mt-1" value="{{ $user->city }}" required>
-      </div>
+                        <div class="col-lg-12 menu-item cart">
+                            <h4>Zamówienie jest puste</h4>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            @endforelse
 
-      <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Ulica / nr domu') }}</label>
-      <div class="form-group">
-          <input type="text" name="street" class="form-control mb-3 mt-1" value="{{ $user->street }}" required>
-      </div>
+            <h4 class="mt-5">
+                Razem: {{\Gloudemans\Shoppingcart\Facades\Cart::total(0)}} zł
+            </h4>
+            <button type="submit" class="btn mb-5">Zamów z obowiązkiem zapłaty</button>
+        </div>
 
-      <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Kod pocztowy') }}</label>
-      <div class="form-group">
-        <input  type="text" name="zip" class="form-control mb-3 mt-1" value="{{ $user->zip }}" required>
-      </div>
-      <div class="row">
-          <div class="container mt-3">
-            <p class="menu-title mb-2">
-              Razem: {{\Gloudemans\Shoppingcart\Facades\Cart::total(0)}} zł
-            </p>
-                  <button type="submit" class="btn">Potwierdź</button>
-          </div>
-      </div>
+        <div class="col-lg-4">
+            <h4><strong>Dane do dostawy</strong></h4>
+            <hr>
+          <ul>
+              <li>Imię i nazwisko:</li>
+              <li class="text-dark"><strong>{{ $user->name }}</strong></li>
+
+              <li class="mt-1">E-mail:</li>
+              <li class="text-dark"><strong>{{ $user->email }}</strong></li>
+
+              <li class="mt-1">Miejscowość:</li>
+              <li class="text-dark"><strong>{{ $user->city }}</strong></li>
+
+              <li class="mt-1">Ulica / nr domu:</li>
+              <li class="text-dark"><strong>{{ $user->street }}</strong></li>
+
+              <li class="mt-1">Kod pocztowy:</li>
+              <li class="text-dark"><strong>{{ $user->zip }}</strong></li>
+          </ul>
+            <hr>
+            <button class="btn"><a href="{{ route('edit') }}">Zmień dane do dostawy</a></button>
+        </div>
   </div>
-
-  </form>
 @endsection
