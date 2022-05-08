@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{{ url('/../css/register.css') }}">
     <link rel="stylesheet" href="{{ url('/../css/register_first_time.css') }}">
     <link rel="stylesheet" href="{{ url('/../css/userpage.css') }}">
-    <link rel="stylesheet" href="{{ url('/../css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('/../css/styles.css?version-1') }}">
 
 
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
