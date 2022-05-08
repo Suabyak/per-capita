@@ -18,8 +18,8 @@ class CartController extends Controller
   {
     $product = Product::findOrFail($request->input('id'));
 
-    Cart::add($product->id, $product->name, 1, $product->price);
-
+    $cartItem = Cart::add($product->id, $product->name, 1, $product->price);
+    $cartItem->taxRate = 0;
     return redirect()->route('orderpage');
   }
 }

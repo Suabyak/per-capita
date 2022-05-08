@@ -10,13 +10,13 @@
     <div class="row">
         <div class="col-lg-6 menu-item">
             <p class="menu-title">{{$product->qty}} x {{$product->name}}</p>
-            <p class="menu-description">
-                {{$product->description}}
-            </p>
             <p class="price">{{$product->price*$product->qty}} zł</p>
         </div>
     </div>
   @endforeach
-  </section>
 
+</section><br><br>
+  <p class="menu-title">
+    Razem: {{\Gloudemans\Shoppingcart\Facades\Cart::total(0)}} zł
+  </p>
 @endsection
