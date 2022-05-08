@@ -62,8 +62,7 @@ class UserController extends Controller
 
     public function checkoutAddress(Request $request)
     {
-
       Cart::destroy();
-      return redirect()->route('home');
+      return redirect()->route('home')->with('message', 'Zamówienie zostało przyjęte do realizacji.');
     }
 }

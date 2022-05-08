@@ -11,6 +11,13 @@
         <div class="bg-img-shadow">
 
             <div class="container">
+              @if(session('message'))
+                <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h4>{{session('message')}}</h4>
+                  </div>
+                </div>
+              @endif
                 <div class="row">
                     <div class="col-lg-12 mt-5 mb-3 text-center">
                         <h1 class="fancy">Per Capita</h1>
