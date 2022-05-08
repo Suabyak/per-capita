@@ -53,7 +53,10 @@
                     <li class="nav-item">
                         <a onclick="show_hide()" class="nav-link" href="{{route('edit')}}">profil</a>
                     </li>
-                    @livewire('cart-counter-mobile')
+                    <li class="nav-item">
+                      @livewire('cart-counter-mobile')
+                    </li>
+
                     <li class="nav-item">
                         <a onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();" class="nav-link" href="{{ route('logout') }}">wyloguj się</a>
@@ -133,8 +136,8 @@
 @yield('content')
 
 
-<script src="js/fade.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="/../js/fade.js"></script>
+<script src="/../js/bootstrap.min.js"></script>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
