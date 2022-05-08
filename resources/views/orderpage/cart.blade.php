@@ -7,7 +7,10 @@
 
 @section('content')
   <section class="order">
-  @foreach(\Gloudemans\Shoppingcart\Facades\Cart::content() as $product)
+  @php
+  $empty = false;
+  @endphp
+  @forelse(\Gloudemans\Shoppingcart\Facades\Cart::content() as $product)
     <div class="row">
         <div class="container">
 
@@ -18,15 +21,30 @@
             </div>
         </div>
     </div>
-  @endforeach
+  @empty
+  @php
+  $empty = true;
+  @endphp
+  <div class="row">
+      <div class="container">
+
+          <div class="col-lg-12 menu-item cart">
+              <p class="menu-title">Zamówienie jest puste</p>
+              <hr>
+          </div>
+      </div>
+  </div>
+  @endforelse
 
 </section>
       <div class="row">
           <div class="container mt-3">
+            @if(!$empty)
             <p class="menu-title mb-2">
               Razem: {{\Gloudemans\Shoppingcart\Facades\Cart::total(0)}} zł
             </p>
               <a href="{{  route('checkout')  }}"><button class="btn me-3">DOSTAWA I PŁATNOŚĆ</button></a>
+            @endif
               <a href="{{ route('orderpage') }}"><button class="btn">KONTYNUUJ ZAKUPY</button></a>
           </div>
       </div>
