@@ -11,7 +11,6 @@ class PizzaOrder extends Component
     public function render()
     {
         $products =  Product::all();
-        // dd($products);
         return view('livewire.pizza-order', ['products' => $products]);
     }
 
