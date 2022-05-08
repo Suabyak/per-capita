@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomepageController::class, 'index']);
+Route::get('/', [HomepageController::class, 'index'])->name('home');
 
 Route::get('order', [OrderpageController::class, 'index'])->name('orderpage');
 Route::post('order', [CartController::class, 'store'])->name('cart.store');
@@ -28,6 +28,8 @@ Route::post('order', [CartController::class, 'store'])->name('cart.store');
 
 
 Route::get('user/order', [CartController::class, 'index'])->name('cart');
+Route::get('user/checkout', [UserController::class, 'checkout'])->name('checkout');
+Route::post('user/checkout', [UserController::class, 'checkoutAddress'])->name('checkout.address');
 
 Route::get('user/profile', [UserController::class, 'edit'])->name('edit');
 

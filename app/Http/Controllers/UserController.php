@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Repositories\UserRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class UserController extends Controller
 {
@@ -52,5 +53,17 @@ class UserController extends Controller
         return view('userpage.userpage', [
             "user" => $user,
         ]);
+    }
+
+    public function checkout()
+    {
+      return view('orderpage.ordercheckout', ['user' => User::find(Auth::id())]);
+    }
+
+    public function checkoutAddress(Request $request)
+    {
+
+      Cart::destroy();
+      return redirect()->route('home');
     }
 }
