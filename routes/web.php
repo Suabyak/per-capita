@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\OrderpageController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserpageController;
 use Illuminate\Support\Facades\Auth;
@@ -21,10 +22,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomepageController::class, 'index']);
 
-Route::get('order', [OrderpageController::class, 'index']);
+Route::get('order', [OrderpageController::class, 'index'])->name('orderpage');
+Route::post('order', [CartController::class, 'store'])->name('cart.store');
 
 
 
+Route::get('user/order', [CartController::class, 'index'])->name('cart');
 
 Route::get('user/profile', [UserController::class, 'edit'])->name('edit');
 

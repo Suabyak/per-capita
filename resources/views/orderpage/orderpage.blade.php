@@ -35,32 +35,31 @@
                   @endphp
 
                   @foreach ($products as $product)
+                  @if ($i==0)
+                    <div class="row">
+                  @endif
+                        <div class="col-lg-6 menu-item">
+                            <p class="menu-title">{{$product->name}}</p>
+                            <p class="menu-description">
+                                {{$product->description}}
+                            </p>
+                            <p class="price">{{$product->price}} zł</p>
+                            <form method="POST" action="{{route('cart.store')}}">
+                              @csrf
+                              <input type="hidden" name="id" value={{$product->id}}>
+                              <button class="order-btn">ZAMÓW</button>
+                            </form>
+                        </div>
                     @if ($i == 0)
                       @php
                         $i++;
                       @endphp
-                        <div class="row">
-                            <div class="col-lg-6 menu-item">
-                                <p class="menu-title">{{$product->name}}</p>
-                                <p class="menu-description">
-                                    {{$product->description}}
-                                </p>
-                                <p class="price">{{$product->price}} zł</p>
-                                <button class="order-btn">ZAMÓW</button>
-                            </div>
                     @else
                       @php
                         $i--;
                       @endphp
-                          <div class="col-lg-6 menu-item">
-                              <p class="menu-title">{{$product->name}}</p>
-                              <p class="menu-description">
-                                  {{$product->description}}
-                              </p>
-                              <p class="price">{{$product->price}} zł</p>
-                              <button class="order-btn">ZAMÓW</button>
-                          </div>
-                      </div>
+                        </div>
+                        <br>
                     @endif
                   @endforeach
 
