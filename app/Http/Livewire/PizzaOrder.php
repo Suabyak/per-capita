@@ -21,5 +21,6 @@ class PizzaOrder extends Component
 
       $cartItem = Cart::add($product->id, $product->name, 1, $product->price);
       $cartItem->taxRate = 0;
+      $this->emit('cart-update');
     }
 }
