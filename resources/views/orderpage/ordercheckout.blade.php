@@ -46,6 +46,7 @@
             </h4>
             <button type="submit" class="btn mb-5">Zamów z obowiązkiem zapłaty</button>
         </div>
+      </form>
 
         <div class="col-lg-4">
             <h4><strong>Dane do dostawy</strong></h4>
@@ -67,7 +68,9 @@
               <li class="text-dark"><strong>{{ $user->zip }}</strong></li>
           </ul>
             <hr>
-            <button class="btn"><a href="{{ route('edit') }}">Zmień dane do dostawy</a></button>
+            <form action="{{route('edit')}}">
+              <button type="submit" class="btn">Zmień dane do dostawy</button>
+            </form>
         </div>
   </div>
 @endsection
