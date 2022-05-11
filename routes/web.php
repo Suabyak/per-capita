@@ -41,8 +41,8 @@ Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
 
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [HomepageController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::post('/', [UserController::class, 'store'])->name('user_store');
