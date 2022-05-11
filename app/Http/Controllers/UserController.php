@@ -38,6 +38,30 @@ class UserController extends Controller
 
     public function editStore(Request $request) {
 
+          switch ($request->input('type')) {
+            case 'delete':
+              $user=User::find($request->input('id'));
+              $user->delete();
+              return redirect()->route('home')->with('message', 'Konto zostało usunięte.');
+              break;
+            case 'store':
+              $user = User::find($request->input('id'));
+
+
+              $user->name = $request->input('name');
+              $user->email = $request->input('email');
+              $user->city = $request->input('city');
+              $user->street = $request->input('street');
+              $user->zip = $request->input('zip');
+
+              $user->save();
+
+              return view('userpage.userpage', [
+                  "user" => $user,
+              ]);
+              break;
+          }
+
         $user = User::find($request->input('id'));
 
 
@@ -70,8 +94,6 @@ class UserController extends Controller
         dd($request);
         $user = User::delete($request->input('id'));
 
-        return view('userpage.userpage', [
-            "user" => $user,
-        ]);
+        return "";
     }
 }

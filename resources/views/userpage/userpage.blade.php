@@ -11,9 +11,11 @@
                         <a class="list-group-item list-group-item-action" href="">Dane do wysyłki</a>
                     </div>
                     <div class="list-group list-group-flush account-settings-links">
-                        <form action="{{ route('delete_user') }}" method="POST" role="form">
-                        <input type="hidden" name="id" value="{{ $user->id }}">
-                        <button type="submit" class="btn text-left ps-4">Usuń konto</button>
+                        <form action="{{ route('edit_store') }}" method="POST" role="form">
+                          @csrf
+                          <input type="hidden" name="type" value="delete">
+                          <input type="hidden" name="id" value="{{ $user->id }}">
+                          <button type="submit" class="btn text-left ps-4">Usuń konto</button>
                         </form>
                     </div>
                 </div>
@@ -22,6 +24,7 @@
                         <div class="tab-pane fade active show">
                             <form action="{{ route('edit_store') }}" method="POST" role="form">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="type" value="store">
                                 <input type="hidden" name="id" value="{{ $user->id }}">
                             <div class="card-body">
 
