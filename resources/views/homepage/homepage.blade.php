@@ -1,10 +1,5 @@
 @extends('navtemplate')
-
-
-
 @section('content')
-
-
 
 <header class="page-header">
     <div class="bg-img-lp">

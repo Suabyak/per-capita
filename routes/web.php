@@ -27,11 +27,11 @@ Route::post('order', [CartController::class, 'store'])->name('cart.store');
 
 
 
-Route::get('user/order', [CartController::class, 'index'])->name('cart');
-Route::get('user/checkout', [UserController::class, 'checkout'])->name('checkout');
+Route::get('user/order', [CartController::class, 'index'])->name('cart')->middleware('auth');
+Route::get('user/checkout', [UserController::class, 'checkout'])->name('checkout')->middleware('auth');
 Route::post('user/checkout', [UserController::class, 'checkoutAddress'])->name('checkout.address');
 
-Route::get('user/profile', [UserController::class, 'edit'])->name('edit');
+Route::get('user/profile', [UserController::class, 'edit'])->name('edit')->middleware('auth');
 
 Route::post('user/profile', [UserController::class, 'editStore'])->name('edit_store');
 // Route::post('user/profile', [UserController::class, 'deleteUser'])->name('delete.user');
