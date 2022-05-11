@@ -31,7 +31,6 @@ class UserController extends Controller
         $id = Auth::id();
         $user = $userRepo->find($id);
 
-
         return view('userpage.userpage', [
             "user" => $user,
         ]);
@@ -64,5 +63,15 @@ class UserController extends Controller
     {
       Cart::destroy();
       return redirect()->route('home')->with('message', 'Zamówienie zostało przyjęte do realizacji.');
+    }
+
+
+    public function deleteUser(Request $request) {
+        dd($request);
+        $user = User::delete($request->input('id'));
+
+        return view('userpage.userpage', [
+            "user" => $user,
+        ]);
     }
 }

@@ -8,7 +8,13 @@
             <div class="row no-gutters row-bordered row-border-light">
                 <div class="col-md-3 pt-0">
                     <div class="list-group list-group-flush account-settings-links">
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="">Dane do wysyłki</a>
+                        <a class="list-group-item list-group-item-action" href="">Dane do wysyłki</a>
+                    </div>
+                    <div class="list-group list-group-flush account-settings-links">
+                        <form action="{{ route('delete_user') }}" method="POST" role="form">
+                        <input type="hidden" name="id" value="{{ $user->id }}">
+                        <button type="submit" class="btn text-left ps-4">Usuń konto</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -27,7 +33,7 @@
 
                                 <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('E-mail') }}</label>
                                 <div class="form-group">
-                                    <input type="email" name="email" class="form-control mb-3 mt-1" value="{{ $user->email }}">
+                                    <input type="email" name="email" class="form-control mb-3 mt-1" value="{{ $user->email }}" readonly>
                                 </div>
 
                                 <label for="email" class="col-form-label pb-0 text-md-end text-dark">{{ __('Miejscowość') }}</label>

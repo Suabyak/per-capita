@@ -33,9 +33,9 @@ Route::post('user/checkout', [UserController::class, 'checkoutAddress'])->name('
 
 Route::get('user/profile', [UserController::class, 'edit'])->name('edit');
 
-Route::post('user/', [UserController::class, 'editStore'])->name('edit_store');
+Route::post('user/profile', [UserController::class, 'editStore'])->name('edit_store');
 
-
+Route::post('/home', [UserController::class, 'deleteUser'])->name('delete_user');
 
 
 
